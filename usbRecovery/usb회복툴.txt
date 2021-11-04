@@ -1,0 +1,99 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Diagnostics;
+
+///////////////////////////////////////////////////////
+// attrib -r -s -h /s /d F:\*.*                      //
+// Access Denied Errors 발생 시 복구 시켜줍니다.    //
+// 바이러스가 없는 컴퓨터 환경에서 실행시켜야 됩니다.//
+///////////////////////////////////////////////////////
+/// 1.0.0 Access Denied Error발생 복구 툴 제작
+/// 해당하는 디스크찾는 방법?//
+    
+
+namespace USB회복툴_ver_1._1._0
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s C:\\*.* ");
+        }
+
+        private void 도움말HToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Acccess Denied Errors 발생 시 복구 시켜줍니다.\n" +
+                "이 외의 USB오류는 복구되지 않습니다.\n" +
+                "USB를 PC에 장착하고 해당 디스크에맞는 버튼을 클릭하세요!\n" +
+                "관리자 권한으로 실행해주시기 바랍니다!\n"+
+                "※ 해당 디스크에 맞지 않는 버튼을 클릭시 복구를 진행하지 못합니다.",
+                "사용설명", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s D:\\*.* ");
+        }
+
+        private void 복구실패시FToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("복구 실패 원인\n1.Acccess Denied Errors가 아닌 경우," +
+                "\n2.해당 PC가 바이러스에 감염되어있는 경우\n" +
+                "3.해당 디스크에 맞지 않는 버튼을 누른 경우 아무것도 뜨지 않습니다." +
+                "\n ---------------------------------------------------------------------\n" +
+                "엑세스 불가가 뜨는 경우 이 프로그램을 관리자 권한으로 실행하세요.");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s E:\\*.* ");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s G:\\*.* ");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s H:\\*.* ");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s I:\\*.* ");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s J:\\*.* ");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s K:\\*.* ");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s L:\\*.* ");
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Process.Start("cmd.exe", "/C attrib -r -s -h /d /s F:\\*.* ");
+        }
+    }
+}
